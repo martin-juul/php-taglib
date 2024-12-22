@@ -1,0 +1,52 @@
+{
+  "name": "martinjuul/php-taglib",
+  "description": "PHP TagLib - read music metadata",
+  "type": "library",
+  "keywords": [
+    "audio",
+    "id3",
+    "id3v1",
+    "id3v2",
+    "taglib"
+  ],
+  "authors": [
+    {
+      "name": "Martin Christiansen",
+      "homepage": "https://juul.dk"
+    }
+  ],
+  "require": {
+    "php": ">=8.2",
+    "ext-ffi": "*",
+    "cweagans/composer-patches": "~2.0"
+  },
+  "require-dev": {
+    "klitsche/ffigen": "^0.8.1",
+    "ircmaxell/php-c-parser": "dev-master"
+  },
+  "minimum-stability": "dev",
+  "prefer-stable": true,
+  "config": {
+    "optimize-autoloader": true,
+    "preferred-install": "dist",
+    "sort-packages": true,
+    "allow-plugins": {
+      "cweagans/composer-patches": true
+    }
+  },
+  "autoload": {
+    "psr-4": {
+      "MartinJuul\\TagLib\\": "src/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "MartinJuul\\TagLib\\Dev\\": "src-dev/"
+    }
+  },
+  "scripts": {
+    "ffibin": [
+      ""
+    ]
+  }
+}

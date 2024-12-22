@@ -1,0 +1,21 @@
+services:
+  app:
+    image: martinjuul/php-taglib:latest
+    container_name: phptaglib-cli
+    build:
+      context: .
+      args:
+        BUILD_ARGUMENT_ENV: dev
+        HOST_UID: ${HOST_UID}
+        HOST_GID: ${HOST_GID}
+        XDEBUG_CONFIG: ${XDEBUG_CONFIG}
+        XDEBUG_VERSION: ${XDEBUG_VERSION}
+      dockerfile: ./Dockerfile
+    ulimits:
+      nofile:
+        soft: 10000
+        hard: 10000
+    extra_hosts:
+      - 'host.docker.internal:host-gateway'
+    volumes:
+      - ./:/var/www/html:cached

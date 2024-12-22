@@ -1,0 +1,12 @@
+headerFiles:
+  - taglib/tag_c.h
+libraryFile: libtag.so.2
+parserClass: MartinJuul\TagLib\Dev\FFiGen\Parser
+outputPath: ./src
+#excludeMethods:
+namespace: MartinJuul\TagLib
+headerSearchPaths:
+  - tmp
+  - /tmp
+  - taglib
+  - /usr/include/taglib
